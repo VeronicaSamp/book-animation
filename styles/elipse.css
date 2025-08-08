@@ -1,0 +1,21 @@
+.elipse-left {
+  content: "";
+  width: 376px;
+  height: 376px;
+  left: calc(50% - 376px / 2 - 791px);
+  top: 494px;
+  background: var(--pink-low);
+  filter: blur(254px);
+  position: absolute;
+}
+
+.elipse-right {
+  content: "";
+  width: 491px;
+  height: 491px;
+  left: calc(50% - 491px / 2 + 696.5px);
+  top: 722px;
+  background: var(--pink-low);
+  filter: blur(254px);
+  position: absolute;
+}
