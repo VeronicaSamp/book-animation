@@ -10,19 +10,11 @@ section.hero {
     position: relative;
     width: 120rem;
     justify-content: center;
-    transform: translateX(-10%);
-  }
-  /*&::after {
-    content: "";
-    width: 376px;
-    height: 376px;
-    left: calc(50% - 376px / 2 - 791px);
-    top: 494px;
-    background: var(--pink-low);
-    /*filter: blur(254px);
 
-    position: absolute;
-  }*/
+    opacity: 0;
+    transform: translateX(-10%);
+    animation: appear 3s forwards;
+  }
 
   & > div:nth-child(2) {
     position: absolute;
@@ -42,7 +34,6 @@ section.hero {
     width: 100%;
     max-width: 90rem;
     padding-top: 18rem;
-    color: white;
 
     & h1 {
       display: block;
@@ -51,6 +42,9 @@ section.hero {
 
       font-size: 3rem;
       font-weight: 700;
+      color: var(--text-title);
+      opacity: 0;
+      animation: appear 3s 200ms forwards;
     }
 
     & p {
@@ -59,9 +53,11 @@ section.hero {
 
       width: 35.5rem;
       margin-inline: auto;
-      padding: 2rem 3rem;
+      padding-top: 2rem;
+      font: 400 var(--body-lg) / 1.4 "Raleway";
 
-      font-size: 400 1.25rem /1.4 var(--body-lg);
+      opacity: 0;
+      animation: appear 3s 800ms forwards;
     }
   }
 }
@@ -84,17 +80,7 @@ section.hero {
 }
 
 @keyframes appear {
+  to {
+    opacity: 1;
+  }
 }
-
-/* Ellipse 2 */
-
-/* Ellipse 2 
-
-position: absolute;
-width: 376px;
-height: 376px;
-left: calc(50% - 376px/2 - 791px);
-top: 494px;
-
-background: #3F0F41;
-filter: blur(254px);*/
