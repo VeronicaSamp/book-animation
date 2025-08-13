@@ -18,4 +18,5 @@
   background: var(--pink-low);
   filter: blur(254px);
   position: absolute;
+  z-index: -1;
 }

@@ -54,7 +54,7 @@ section.hero {
       width: 35.5rem;
       margin-inline: auto;
       padding-top: 2rem;
-      font: 400 var(--body-lg) / 1.4 "Raleway";
+      font: 400 var(--body-lg) / 1.4 "Raleway", sans-serif;
 
       opacity: 0;
       animation: appear 3s 800ms forwards;

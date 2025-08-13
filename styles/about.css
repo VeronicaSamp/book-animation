@@ -1,0 +1,113 @@
+section.about {
+  display: flex;
+  text-align: center;
+
+  margin-top: 6rem;
+  margin-inline: auto;
+
+  padding-block: 6rem 10rem;
+
+  max-width: 75rem;
+
+  & > div:nth-child(2) {
+    font: 500 2rem/2 "Raleway", sans-serif;
+    position: relative;
+
+    & img {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    & img[src*="book"] {
+      transform: translateY(-100%) translateX(35rem);
+    }
+
+    & img[src*="ouija"] {
+      transform: translateY(150%) translateX(-35rem);
+    }
+
+    & img[src*="ball"] {
+      transform: translateY(60%) translateX(47rem);
+    }
+
+    & .parte {
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+    }
+
+    &.container:hover .parte1 {
+      animation: fadeIn 0.5s forwards;
+      animation-delay: 0s;
+    }
+
+    &.container:hover .parte2 {
+      animation: fadeIn 0.5s forwards;
+      animation-delay: 0.5s;
+    }
+
+    &.container:hover .parte3 {
+      animation: fadeIn 0.5s forwards;
+      animation-delay: 1s;
+    }
+
+    &.container:hover .parte1 .word-blue {
+      animation: fadeIn-blue 0.5s forwards;
+      animation-delay: 0s;
+    }
+
+    &.container:hover .parte2 .word-blue {
+      animation: fadeIn-blue 0.5s forwards;
+      animation-delay: 0.5s;
+    }
+
+    &.container:hover .parte3 .word-blue {
+      animation: fadeIn-blue 0.5s forwards;
+      animation-delay: 1s;
+    }
+
+    &.container:hover img[src*="book"] {
+      animation: logo 0.5s ease forwards;
+      animation-delay: 0s;
+    }
+
+    &.container:hover img[src*="ouija"] {
+      animation: logo 0.5s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    &.container:hover img[src*="ball"] {
+      animation: logo 0.5s ease forwards;
+      animation-delay: 1s;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn-blue {
+  from {
+    color: inherit;
+  }
+  to {
+    color: var(--blue-light);
+  }
+}
+
+@keyframes logo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
