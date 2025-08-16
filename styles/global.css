@@ -35,6 +35,10 @@ html {
   font-family: "Raleway", sans-serif;
   color: var(--text-body);
   overflow-x: hidden;
+
+  max-width: 90rem;
+  width: 100%;
+  margin-inline: auto;
 }
 
 body {

@@ -1,0 +1,88 @@
+footer {
+  max-width: 90rem;
+  width: 100%;
+  margin-inline: auto;
+
+  background: url(../assets/book-trace-background.svg) no-repeat;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10.62rem 10rem 4.5rem;
+
+  & .logo {
+    & img[src*="logo"] {
+      width: 16.5rem;
+    }
+
+    & .separator {
+      height: 1px;
+      margin-block: 0.75rem;
+      background: var(--shape-stroke);
+    }
+
+    & .social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & a {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 5rem;
+        position: relative;
+
+        z-index: 1;
+
+        &:hover::before {
+          opacity: 1;
+        }
+
+        &::before {
+          content: "";
+
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+
+          background: var(--shape-stroke);
+          position: absolute;
+
+          z-index: -1;
+          opacity: 0;
+          transition: 300ms;
+        }
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 3.5rem;
+
+    & .title {
+      color: var(--text-body);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    & li {
+      padding-bottom: 1rem;
+    }
+
+    & a {
+      color: var(--blue-light);
+      font-size: 0.875rem;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--text-body);
+      }
+    }
+  }
+}

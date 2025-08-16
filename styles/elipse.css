@@ -33,16 +33,14 @@
   z-index: -1;
 }
 
-/* blur 
-
-position: absolute;
-width: 930px;
-height: 930px;
-left: calc(50% - 930px/2);
-top: calc(50% - 930px/2 + 38px);
-
-background: #3F0F41;
-opacity: 0.5;
-filter: blur(300px);*/
-
-/* blur */
+.elipse-bottom {
+  content: "";
+  width: 930px;
+  height: 930px;
+  left: calc(50% - 930px / 2);
+  top: 2900px;
+  background: var(--shape-base);
+  filter: blur(300px);
+  position: absolute;
+  z-index: -1;
+}
